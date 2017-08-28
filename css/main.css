@@ -1,5 +1,6 @@
 /* www.alsina.xyz | Alchemically bonded by Sebastian Alsina (@youngseebi) */
 
+
 /* [==] COLORS [==]
  * 1:
  * 2:
@@ -9,7 +10,9 @@
 
 
 /* [==] FONTS [==]*/
-@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,500');
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,500');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 
 /*
  * [==] General [==]
@@ -21,11 +24,194 @@ body {
     width: 100%;
     background-color: white;
     color: black;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 a {
     color: cornflowerblue;
+}
+
+.contain {
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+
+/*
+* [==========]
+* ** Header **
+*/
+
+.header {
+    width: 100%;
+    height: auto;
+    padding: 44px;
+    border-bottom: 1px solid #ececec;
+}
+
+.header .left {
+    float: left;
+}
+
+.header .right {
+    float: right;
+}
+
+@media only screen and (min-device-width: 320px) and (max-width: 768px) {
+    .header {
+        text-align: center;
+    }
+    .header .left,
+    .header .right {
+        float: none;
+    }
+    .header .logo {
+        margin-bottom: 22px;
+    }
+}
+
+.header .logo img {
+    max-width: 120px;
+}
+
+.header .links li {
+    display: inline-block;
+    margin-right: 22px;
+}
+
+.header .links li:last-of-type {
+    margin-right: 0;
+}
+
+.header .links li a {
+    color: inherit;
+}
+
+
+/*
+* [==========]
+* ** Landing **
+*/
+
+.landing {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ececec;
+}
+
+.landing .work-example {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    border: 20px solid white;
+    border-bottom: 0;
+    position: relative;
+}
+
+.landing .work-example:last-of-type {
+    border-bottom: 20px solid white;
+}
+
+.landing .work-example h3 {
+    font-size: 1.6em;
+    margin-bottom: 12px;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+}
+
+.landing .work-example .text {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    margin: auto;
+    padding: 22px;
+    background-color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5em;
+}
+
+@media only screen and (min-device-width: 320px) and (max-width: 768px) {
+    .landing .work-example .text {
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+}
+
+
+/*
+* [==========]
+* ** Header **
+*/
+
+.panel {
+    padding: 80px 22px;
+}
+
+.about {
+    width: 100%;
+    height: auto;
+}
+
+.about .left,
+.about .right {
+    float: left;
+    width: 50%;
+    height: auto;
+    padding: 0 22px;
+}
+
+.about .left {
+    text-align: right;
+}
+
+.about .right {
+    text-align: left;
+    border-left: 1px solid #ececec;
+}
+
+.about .selfie img {
+    width: 100%;
+    max-width: 440px;
+}
+
+.about .text {
+    max-width: 500px;
+    color: black;
+}
+
+.about h3 {
+    font-size: 2em;
+    margin-bottom: 22px;
+}
+
+.about p {
+    margin-bottom: 22px;
+    line-height: 1.5em;
+}
+
+@media only screen and (min-device-width: 320px) and (max-width: 768px) {
+    .about .left,
+    .about .right {
+        float: none;
+        width: 100%;
+        padding: 0;
+    }
+    .about .selfie {
+        margin-bottom: 22px;
+    }
+    
+    .about .selfie img {
+        max-width: 100%;
+    }
+    
+    .about .text {
+        max-width: 100%;
+    }
 }
 
 @media only screen and (min-device-width: 320px) and (max-width: 768px) {}
